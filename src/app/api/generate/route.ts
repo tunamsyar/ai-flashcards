@@ -8,11 +8,12 @@ export async function POST(request: NextRequest) {
     const generator = new FlashcardGenerator()
     const result = await generator.fromText(text)
 
-    return NextResponse.json({result})
+    return NextResponse.json(result)
+
   } catch(error) {
     console.error(error)
     return NextResponse.json(
-      { error: 'Failed to generate flashcards' },
+      { error: error instanceof Error ? error.message : "An unexpected error occurred." },
       { status: 500 }
     )
   }

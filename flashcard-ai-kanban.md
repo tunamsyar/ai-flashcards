@@ -6,10 +6,12 @@
 - [x] Dockerfile created
 - [x] HuggingFace configured
 - [x] Supabase project set up
+- [x] Create Ollama FlashcardGenerator class with `fromText
 - [x] FlashcardGenerator base logic created (skeleton)
+- [x] Set up `/api/generate` route and plug in FlashcardGenerator
 
 ## 🟩 Backlog
-- [ ] Create HuggingFace FlashcardGenerator class with `fromText(content: string): Flashcard[]`
+(content: string): Flashcard[]`
 - [ ] Add parsing logic for HuggingFace raw output → `[{ question, answer }]`
 - [ ] Create Supabase `flashcards` table (SQL schema)
 - [ ] Create Supabase wrapper to save flashcards
@@ -24,7 +26,6 @@
 - [ ] Add button to "Save to My Deck"
 
 ## 🔨 In Progress
-- [ ] Set up `/api/generate` route and plug in FlashcardGenerator
 
 ## 🧪 Testing
 - [ ] Test flashcard generation edge cases (very short/long input)
