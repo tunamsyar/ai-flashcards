@@ -11,7 +11,10 @@ const FlipCard: React.FC<{ flashCard: FlashCard }> = ({ flashCard }) => {
   const [flipped, setFlipped] = useState(false);
 
   return (
-    <div className="w-80 h-48 perspective" onClick={() => setFlipped(!flipped)}>
+    <div
+      className="w-full h-full perspective cursor-pointer"
+      onClick={() => setFlipped(!flipped)}
+    >
       <div
         className={`relative w-full h-full duration-700 transform-style preserve-3d ${
           flipped ? "rotate-y-180" : ""
